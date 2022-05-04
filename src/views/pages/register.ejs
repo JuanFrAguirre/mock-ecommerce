@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs', {title: 'Register'}) %>
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main class="container mx-auto">
+      <form
+        action="/auth/register"
+        method="post"
+        class="p-6 px-20 bg-stone-100 rounded-md max-w-[90%] mx-auto shadow-lg flex flex-col gap-4"
+      >
+        <h1 class="text-3xl font-bold text-center my-6">Register</h1>
+        <div class="flex gap-10">
+          <div class="flex flex-col grow gap-2">
+            <label for="username"
+              >Username <%- include ('../partials/requiredDot') %>
+            </label>
+            <input
+              class="rounded-md shadow py-2 px-4 focus:outline-teal-500"
+              type="text"
+              name="username"
+              id="username"
+              required
+            />
+          </div>
+          <div class="flex flex-col grow gap-2">
+            <label for="email"
+              >Email <%- include ('../partials/requiredDot') %>
+            </label>
+            <input
+              class="rounded-md shadow py-2 px-4 focus:outline-teal-500"
+              type="email"
+              name="email"
+              id="email"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex gap-10">
+          <div class="flex flex-col grow gap-2">
+            <label for="firstName"
+              >First Name <%- include ('../partials/requiredDot') %>
+            </label>
+            <input
+              class="rounded-md shadow py-2 px-4 focus:outline-teal-500"
+              type="text"
+              name="firstName"
+              id="firstName"
+              required
+            />
+          </div>
+          <div class="flex flex-col grow gap-2">
+            <label for="middleName">Middle Name </label>
+            <input
+              class="rounded-md shadow py-2 px-4 focus:outline-teal-500"
+              type="text"
+              name="middleName"
+              id="middleName"
+            />
+          </div>
+          <div class="flex flex-col grow gap-2">
+            <label for="lastName"
+              >Last Name <%- include ('../partials/requiredDot') %>
+            </label>
+            <input
+              class="rounded-md shadow py-2 px-4 focus:outline-teal-500"
+              type="text"
+              name="lastName"
+              id="lastName"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex gap-10">
+          <div class="flex flex-col grow gap-2">
+            <label for="password"
+              >Password <%- include ('../partials/requiredDot') %>
+            </label>
+            <input
+              class="rounded-md shadow py-2 px-4 focus:outline-teal-500"
+              type="password"
+              name="password"
+              id="password"
+              required
+            />
+          </div>
+          <div class="flex flex-col grow gap-2">
+            <label for="confirmPassword"
+              >Confirm Password <%- include ('../partials/requiredDot') %>
+            </label>
+            <input
+              class="rounded-md shadow py-2 px-4 focus:outline-teal-500"
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              required
+            />
+          </div>
+        </div>
+        <button
+          class="py-4 px-6 my-6 text-white bg-teal-500 text-xl shadow-md rounded-md hover:bg-teal-600 focus:translate-y-[2px] self-center"
+        >
+          Register
+        </button>
+      </form>
+      <div class="text-center mt-6">
+        <h4>Already have an account?</h4>
+        <a class="text-teal-500 hover:underline" href="/auth/login"
+          >Login instead</a
+        >
+      </div>
+    </main>
+  </body>
+</html>

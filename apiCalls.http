@@ -1,0 +1,7 @@
+GET http://localhost:3030/api
+
+###
+GET http://localhost:3030/api/products
+
+###
+GET http://localhost:3030/api/products/5

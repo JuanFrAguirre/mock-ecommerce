@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../partials/head.ejs', {title: 'Products'}) %>
+  <body>
+    <%- include ('../partials/header.ejs') %>
+    <main class="container">
+      <a href="/products" class="backBtn">Volver</a>
+      <div class="product">
+        <div class="left">
+          <h2><%= product.description %></h2>
+          <h4><%= product.brand %></h4>
+          <p>$ <%= product.price %></p>
+        </div>
+        <div class="right">
+          <img
+            src="<%= product.img %>"
+            alt="<%= product.description %>"
+            width="300"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../partials/head.ejs', {title: 'Product'}) %>
+  <body>
+    <%- include ('../partials/header.ejs') %>
+    <main class="container">
+      <h2>Products</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+        cupiditate qui fuga natus sunt cum corporis nostrum sint dolorem optio.
+      </p>
+      <div class="products">
+        <% if (locals.products) { %> <% products.forEach(prod => { %>
+        <a href="/products/<%= prod.id %> " class="products__product">
+          <h3><%= prod.description %></h3>
+          <img src="<%= prod.img %> " alt="<%= prod.description %> " />
+        </a>
+        <% }) %> <% } %>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &-control {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-sendBtn {
+    display: inline-block;
+    justify-self: center;
+    padding: 10px 20px;
+    background-color: $gray;
+    color: $whitish;
+  }
+}

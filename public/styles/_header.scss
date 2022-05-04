@@ -1,0 +1,41 @@
+.header__container {
+  background: $graygrade;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header {
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+
+  .title {
+    color: $whitish;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      font-weight: bold;
+      font-size: 16px;
+
+      &:hover {
+        color: $whitish;
+      }
+    }
+  }
+}
+
+.spacer {
+  height: 100px;
+}
