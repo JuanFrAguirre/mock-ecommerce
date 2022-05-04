@@ -14,13 +14,12 @@
           <label for="username"
             >Username <%- include ('../partials/requiredDot.ejs') %>
           </label>
-          <input
-            class="rounded-md shadow py-2 px-4 focus:outline-teal-500"
-            type="text"
-            name="username"
-            id="username"
-            required
-          />
+          <input class="rounded-md shadow py-2 px-4 focus:outline-teal-500"
+          type="text" name="username" id="username" 
+          <% if (locals.username) { %>
+            value="<%= username %> "
+          <% } %>
+          required />
         </div>
         <div class="flex flex-col grow gap-2">
           <label for="password"

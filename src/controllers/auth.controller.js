@@ -33,18 +33,19 @@ const authController = {
           errors,
           data: req.body,
         })
-      : res.send(`
-          <html>
-            <body>
-            <h1>User registered correctly!</h1>
-            <script>
-              setTimeout(function () {
-                (window.location = 'http://localhost:3030/auth/login')
-              }, 3000);
-            </script>
-            </body>
-          </html>
-        `)
+      : // res.send(`
+        //     <html>
+        //       <body>
+        //       <h1>User registered correctly!</h1>
+        //       <script>
+        //         setTimeout(function () {
+        //           (window.location = 'http://localhost:3030/auth/login')
+        //         }, 3000);
+        //       </script>
+        //       </body>
+        //     </html>
+        //   `)
+        res.render('pages/login', { username })
   },
 }
 
