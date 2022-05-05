@@ -7,7 +7,7 @@
       <form
         action="/auth/login"
         method="post"
-        class="p-6 px-20 bg-stone-100 rounded-md max-w-[60%] mx-auto shadow-lg flex flex-col gap-4"
+        class="p-6 px-20 bg-stone-100 rounded-md max-w-[60%] mx-auto shadow-xl flex flex-col gap-4"
       >
         <h1 class="text-3xl font-bold text-center my-8">Login</h1>
         <div class="flex flex-col grow gap-2">
@@ -33,13 +33,16 @@
             required
           />
         </div>
+        <% if (locals.error) { %>
+          <p class="text-center text-red-500 text-lg font-medium mt-4"><%= error %> </p>
+        <% } %>
         <button
           class="py-4 px-6 my-6 text-white bg-teal-500 text-xl shadow-md rounded-md hover:bg-teal-600 focus:translate-y-[2px] self-center"
         >
           Login
         </button>
       </form>
-      <div class="text-center mt-6">
+      <div class="text-center mt-10">
         <h4>Don't have an account?</h4>
         <a class="text-teal-500 hover:underline" href="/auth/register"
           >Register first</a

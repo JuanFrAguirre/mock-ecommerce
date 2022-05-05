@@ -4,6 +4,11 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main class="container mx-auto">
+      <% if (locals.user) { %>
+        <p class="font-bold text-2xl text-center my-4">Welcome 
+          <%= user %> 
+        </p>
+      <% } %>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
         voluptatibus eaque tempore alias soluta eveniet quidem necessitatibus

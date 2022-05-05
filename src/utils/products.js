@@ -9,8 +9,7 @@ const products = {
   },
   getProductById: function (id) {
     let products = this.getProducts()
-    let product = products.find((x) => String(x.id) === String(id))
-    return product
+    return products.find((product) => String(product.id) === String(id))
   },
 }
 

@@ -1,3 +1,8 @@
+const fetch = require('node-fetch')
+const axios = require('axios')
+
+const BASE_URL = 'http://localhost:3030'
+
 const authController = {
   login: (req, res) => {
     res.render('pages/login')
@@ -5,23 +10,23 @@ const authController = {
   register: (req, res) => {
     res.render('pages/register')
   },
-  postLogin: (req, res) => {
-    let { username, password } = req.body
-
-    res.send(body)
+  postLogin: async (req, res) => {
+    try {
+      let response = await axios.post(`${BASE_URL}/api/login`, req.body)
+      if (response.data === 'ok') {
+        req.session.user = req.body.username
+        res.redirect('/')
+      } else
+        res.render('pages/login', {
+          error: 'Wrong credentials. Please try again.',
+        })
+    } catch (error) {
+      res.send(error)
+    }
   },
   postRegister: (req, res) => {
     let errors = []
-    let {
-      username,
-      email,
-      firstName,
-      middleName,
-      lastName,
-      password,
-      confirmPassword,
-    } = req.body
-
+    let { username, email, password, confirmPassword } = req.body
     if (username.length < 6 || username.length > 20)
       errors.push('Username must be between 6 and 20 characters long')
     if (email === 'jf@jf') errors.push(`Email ${email} is already registered`)
@@ -33,19 +38,7 @@ const authController = {
           errors,
           data: req.body,
         })
-      : // res.send(`
-        //     <html>
-        //       <body>
-        //       <h1>User registered correctly!</h1>
-        //       <script>
-        //         setTimeout(function () {
-        //           (window.location = 'http://localhost:3030/auth/login')
-        //         }, 3000);
-        //       </script>
-        //       </body>
-        //     </html>
-        //   `)
-        res.render('pages/login', { username })
+      : res.render('pages/login', { username })
   },
 }
 

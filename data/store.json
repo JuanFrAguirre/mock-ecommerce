@@ -41,5 +41,51 @@
       "price": 0.37
     }
   ],
-  "users": []
+  "users": [
+    {
+      "id": 1,
+      "username": "jfaguirre",
+      "firstName": "Juan",
+      "middleName": "Francisco",
+      "lastName": "Aguirre",
+      "email": "jf_aguirre@hotmail.com",
+      "password": "asdasd"
+    },
+    {
+      "id": 2,
+      "username": "jfaguirres",
+      "firstName": "Juan",
+      "middleName": "Francisco",
+      "lastName": "Aguirre",
+      "email": "jf_aguirre@hotmail.com",
+      "password": "asdasd"
+    },
+    {
+      "id": 3,
+      "username": "jfaguirresss",
+      "firstName": "Juan",
+      "middleName": "Francisco",
+      "lastName": "Aguirre",
+      "email": "jf_aguirre@hotmail.com",
+      "password": "asdasd"
+    },
+    {
+      "id": 4,
+      "username": "jfaguirress",
+      "firstName": "Juan",
+      "middleName": "Francisco",
+      "lastName": "Aguirre",
+      "email": "jf_aguirre@hotmail.com",
+      "password": "asdasd"
+    },
+    {
+      "id": 5,
+      "username": "jfaguirresssssss",
+      "firstName": "Juan",
+      "middleName": "Francisco",
+      "lastName": "Aguirre",
+      "email": "jf_aguirre@hotmail.com",
+      "password": "asdasd"
+    }
+  ]
 }
